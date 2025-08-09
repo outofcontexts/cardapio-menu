@@ -1,0 +1,36 @@
+# Projeto PHP - Cardápio de Restaurante
+
+## ✅ Requisitos
+- PHP 7.4 ou superior
+- MySQL (5.7+)
+- Ambiente local
+
+## 📥 Passos para rodar localmente
+
+## 🔧 Configurações do Banco de Dados (no código PHP)
+
+- Host: `localhost`
+- Banco: `restaurante`
+- Usuário: `root`
+- Senha: `1234` (modifique se for diferente no seu ambiente)
+
+## ✅ Funcionalidades
+
+- Adicionar, editar e remover pratos
+- Listar cardápio por tipo (salgado e sobremesa)
+
+---
+
+Passos para rodar:
+
+1° - Para inciar o php: php -S localhost:8080
+
+2° - Rodar no Prompt de Comando:
+Adicionar:
+curl -X POST http://localhost:8080/index.php -d "nome=Pizza&descricao=Deliciosa&tempo=25&preco=33.90&tipo=salgado"
+
+Editar:
+curl -X POST "http://localhost:8080/index.php?editar=3" -d "nome=Pizza Nova&descricao=Mais deliciosa&tempo=30&preco=35.90&tipo=salgado"
+
+Remover:
+curl "http://localhost:8080/index.php?remover=5,6,7"
